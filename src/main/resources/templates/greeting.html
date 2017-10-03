@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css">
+    <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Note Manager</title>
+</head>
+<body>
+<h1>Notes</h1>
+<ol class="list-group">
+    {{#notes}}
+    <li class="list-group-item">{{note}}</li>
+    {{/notes}}
+</ol>
+
+<form action="/" method="post" id="noteform">
+    <div class="form-group">
+        <label for="note" class="control-label">Note:</label>
+        <input type="text" class="form-control" name="note" id="note" required/>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+</body>
+</html>
